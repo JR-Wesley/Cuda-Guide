@@ -1,0 +1,30 @@
+# Build outputs and local environments
+build/
+!**/commands/build/
+!**/experiments/build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+.venv/
+.venvs/
+.python/
+.cache/
+__pycache__/
+*.pyc
+*.o
+*.a
+*.so
+*.so.*
+a.out
+
+# Downloads, run records and profiler output
+downloads/
+runs/
+results/
+traces/
+log/
+logs/
+*.log
+*.ncu-rep
+*.nsys-rep
+*.sqlite

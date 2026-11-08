@@ -1,0 +1,4 @@
+nvidia-cutlass-dsl[cu13]
+torch
+numpy
+pytest

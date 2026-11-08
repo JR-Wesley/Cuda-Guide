@@ -1,0 +1,13 @@
+Official repository: https://github.com/gpgpu-sim/gpgpu-sim_distribution.git
+Command (working directory: /home/mikasa/hpc/cuda/gpgpu-sim-lab):
+git clone --depth 1 https://github.com/gpgpu-sim/gpgpu-sim_distribution.git repo
+
+Initial sandbox attempt exit code: 128
+Cloning into 'repo'...
+fatal: unable to access 'https://github.com/gpgpu-sim/gpgpu-sim_distribution.git/': Failed to connect to github.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+
+Same command retried with network permission (require_escalated): exit code 0.
+Cloning into 'repo'...
+
+This file transcribes tool outputs; the repository identity is independently
+recorded in git-remote.txt and git-commit.txt. No system packages were installed.

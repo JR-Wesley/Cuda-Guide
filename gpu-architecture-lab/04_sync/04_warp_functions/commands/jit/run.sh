@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/../.." && pwd)
+arch=${CUDA_ARCH:-sm_80}
+[[ "$arch" =~ ^sm_[0-9]+[af]?$ ]] || { echo 'Invalid CUDA_ARCH' >&2; exit 2; }
+nvcc=${NVCC:-nvcc}
+source "$root/../../tools/lab-common.sh"
+lab_init "${arch}-release" main
+require_artifacts "$out/bin/warp_functions"
+
+# Metadata only: the CUDA runtime query below is authoritative for visible device 0.
+step device nvidia-smi --query-gpu=name,compute_cap,driver_version --format=csv,noheader || true
+step force_ptx_jit timeout 60 env CUDA_FORCE_PTX_JIT=1 "$out/bin/warp_functions" quick

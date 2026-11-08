@@ -1,0 +1,8 @@
+.venvs/
+.python/
+.cache/
+runs/
+/build/
+/commands/*/log/
+__pycache__/
+*.pyc

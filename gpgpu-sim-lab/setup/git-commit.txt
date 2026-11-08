@@ -1,0 +1,16 @@
+commit c3eeb6d19016960ab66789efdd8a3200cc30222a
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Sat Oct 3 02:37:48 2026 +0000
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Sat Oct 3 04:39:09 2026 +0000
+
+    Add a cuda-samples CI tier to replace the CUDA SDK 4.2 apps
+    
+    regress/cuda-samples/run.sh clones NVIDIA cuda-samples v12.8, shrinks the
+    inputs of the slow samples (scale.sh), builds the samples listed in
+    samples.txt against the simulator's shared cudart, and runs each in
+    functional simulation. The samples check their own results against the
+    CPU, so no GPU reference outputs are needed. The 37 listed samples pass
+    on QV100; the workflow runs them on the same changes as the PR tier.
+    
+    Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>

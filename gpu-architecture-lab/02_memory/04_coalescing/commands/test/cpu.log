@@ -1,0 +1,38 @@
+action=test
+variant=cpu
+CUDA_ARCH=not-applicable
+Build: /home/mikasa/hpc/cuda/gpu-architecture-lab/02_memory/04_coalescing/build/cpu
+Log: /home/mikasa/hpc/cuda/gpu-architecture-lab/02_memory/04_coalescing/commands/test/cpu.log
+CUDA_VISIBLE_DEVICES=unset
+CUDA_FORCE_PTX_JIT=unset
+CUDA_LAUNCH_BLOCKING=unset
+
+[python] python3 --version
+Python 3.14.9
+[python] exit_code=0
+
+[unit] python3 -B -m unittest discover -s /home/mikasa/hpc/cuda/gpu-architecture-lab/02_memory/04_coalescing -p test_coalescing_model.py -v
+test_bytewise_reference (test_coalescing_model.CoalescingModelTests.test_bytewise_reference) ... ok
+test_contiguous_widths (test_coalescing_model.CoalescingModelTests.test_contiguous_widths) ... ok
+test_duplicate_addresses (test_coalescing_model.CoalescingModelTests.test_duplicate_addresses) ... ok
+test_empty_active_lanes (test_coalescing_model.CoalescingModelTests.test_empty_active_lanes) ... ok
+test_invalid_alignment_and_addresses (test_coalescing_model.CoalescingModelTests.test_invalid_alignment_and_addresses) ... ok
+test_lane_contiguous_scalar_uses_disjoint_sectors (test_coalescing_model.CoalescingModelTests.test_lane_contiguous_scalar_uses_disjoint_sectors) ... ok
+test_layouts_cover_same_bytes_but_change_ownership (test_coalescing_model.CoalescingModelTests.test_layouts_cover_same_bytes_but_change_ownership) ... ok
+test_partial_warp (test_coalescing_model.CoalescingModelTests.test_partial_warp) ... ok
+test_same_ownership_scalar_repeats_sectors (test_coalescing_model.CoalescingModelTests.test_same_ownership_scalar_repeats_sectors) ... ok
+test_scalar_offset (test_coalescing_model.CoalescingModelTests.test_scalar_offset) ... ok
+test_segment_end_is_inclusive (test_coalescing_model.CoalescingModelTests.test_segment_end_is_inclusive) ... ok
+test_stride_32 (test_coalescing_model.CoalescingModelTests.test_stride_32) ... ok
+test_unsupported_width_segment_and_lane_count (test_coalescing_model.CoalescingModelTests.test_unsupported_width_segment_and_lane_count) ... ok
+test_vector_offsets (test_coalescing_model.CoalescingModelTests.test_vector_offsets) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.006s
+
+OK
+[unit] exit_code=0
+step	exit_code
+python	0
+unit	0
+action_exit_code=0

@@ -1,0 +1,36 @@
+[submodule "accel-sim-lab/repo/accel-sim-framework"]
+	path = accel-sim-lab/repo/accel-sim-framework
+	url = https://github.com/accel-sim/accel-sim-framework.git
+[submodule "cuda-op/SGEMM_CUDA"]
+	path = cuda-op/SGEMM_CUDA
+	url = https://github.com/siboehm/SGEMM_CUDA.git
+[submodule "cuda-op/flash-attention"]
+	path = cuda-op/flash-attention
+	url = https://github.com/Dao-AILab/flash-attention.git
+[submodule "cuda-op/flash-attention-minimal"]
+	path = cuda-op/flash-attention-minimal
+	url = https://github.com/tspeterkim/flash-attention-minimal.git
+[submodule "gpgpu-sim-lab/repo/gpgpu-sim_distribution"]
+	path = gpgpu-sim-lab/repo/gpgpu-sim_distribution
+	url = https://github.com/gpgpu-sim/gpgpu-sim_distribution.git
+[submodule "third-party/CUDA-Python-Op-Lib"]
+	path = third-party/CUDA-Python-Op-Lib
+	url = https://github.com/JR-Wesley/CUDA-Python-Op-Lib.git
+[submodule "third-party/CUDApunk"]
+	path = third-party/CUDApunk
+	url = https://github.com/JR-Wesley/CUDApunk.git
+[submodule "third-party/LeetCUDA"]
+	path = third-party/LeetCUDA
+	url = https://github.com/xlite-dev/LeetCUDA.git
+[submodule "third-party/cuda-samples"]
+	path = third-party/cuda-samples
+	url = https://github.com/NVIDIA/cuda-samples.git
+[submodule "third-party/cuda-training-series"]
+	path = third-party/cuda-training-series
+	url = https://github.com/olcf/cuda-training-series.git
+[submodule "third-party/pmpp"]
+	path = third-party/pmpp
+	url = https://github.com/tugot17/pmpp.git
+[submodule "third-party/professional-cuda-c-programming"]
+	path = third-party/professional-cuda-c-programming
+	url = https://github.com/deeperlearning/professional-cuda-c-programming.git
